@@ -1,0 +1,77 @@
+/*================== Variables ====================== */
+:root {
+    --MainColor: #062038;
+    --MainColorOpsity: #062038e8;
+    --SecondryColor: #041625;
+    --SecColorOpsity: #041625ed;
+    --pinkColor: #aa14cc;
+    --backGround: rgba(255, 255, 255, 0.151);
+    --colorArticles: #9ba2a8;
+    --Blue: #2196f3;
+    --Font-size-section: 2em;
+    --Main-Nav-Gen: rgba(4, 22, 37, 0.959);
+    
+}
+
+/*========================== Header ======================  */
+header.gen { 
+    background-color: var(--Main-Nav-Gen); 
+    color: #fff; 
+    min-height: 5vh; 
+    position: fixed;  
+    z-index: 999;   
+    width: 100%;
+}
+
+header nav .list.gen { 
+    background-color: var(--Main-Nav-Gen);
+    position: absolute;
+    z-index: 100;
+    display: none;
+    top: 50px;
+    right: 0;
+    min-width: 180px;
+    min-height: 94vh;
+    width: 12%;
+}
+
+/*================ Content ====================== */
+
+.content { 
+    position: relative; 
+    background-color: var(--MainColor);
+}
+
+.content > div {
+    position: absolute;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.content .info { text-align: center; margin-bottom: 2.5em;}
+.content .info h2 { color: #fff; }
+.content .info p { color: #999; margin: 1.5em;}
+.content .video  { text-align: center;}
+.content .video iframe { max-width: 100%;}
+.content .video .text {
+    padding: 2em;
+    background-color: var(--backGround);
+    margin: 0 auto;
+}
+
+.content .video .text p { color: var(--colorArticles); line-height: 1.7;}
+
+.content main article { 
+    margin: 2em auto; 
+    padding: .6em;
+    width: 80%;
+    color: var(--colorArticles);
+    text-transform: capitalize;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/*==================== Offers ============================ */
+ section.gen {   background-color: var(--Main-Nav-Gen);}

@@ -1,0 +1,359 @@
+/*======================== Global Rules ======================== */
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+img,p { max-width: 100%;}
+
+ul { list-style: none;}
+
+a { text-decoration: none;}
+
+body { font-family: 'Noto Sans JP', sans-serif;}
+
+:root {
+    --MainColor: #062038;
+    --MainColorOpsity: #062038e8;
+    --SecondryColor: #041625;
+    --SecColorOpsity: #041625ed;
+    --pinkColor: #aa14cc;
+    --backGround: rgba(255, 255, 255, 0.151);
+    --colorArticles: #9ba2a8;
+    --Blue: #2196f3;
+    --Font-size-section: 2em;
+    
+}
+
+/*====================== My Frame Work ==================================== */
+.container { 
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.flex { display: flex;}
+
+.main-padding { padding-top: 2em; padding-bottom: 2em;}
+
+
+
+/*========================== Header ======================  */
+header { 
+    background-color: rgba(4, 22, 37, 0.75); 
+    color: #fff; 
+    min-height: 5vh; 
+    position: fixed;  
+    z-index: 999;   
+    width: 100%;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header nav .logo { padding: 1em;}
+
+header nav .logo h3 { font-size: 1em; font-weight: bold; text-transform: capitalize;}
+
+header nav .logo h3  span { display: inline-block; margin-left: .5em;}
+
+header nav .list { 
+    background-color: #051c2f69;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    top: 50px;
+    right: 0;
+    min-width: 100px;
+    min-height: 94vh;
+}
+
+header nav .list.show { display: block; transition: .5s;}
+
+header nav .list li {
+    display: block;
+    padding: 2em;
+    margin-left: 1em;
+    text-align: center;
+    position: relative;
+    transition: .5s;
+    margin-top: 1em;
+}
+
+header nav .list li:not(:last-of-type)::after {
+content: '';
+width: 90px;
+height: .1px;
+position: absolute;
+left: 50%;
+top: 73%;
+transform: translate(-50%, -50%);
+background-color: var(--Blue);
+font-size: 1.2em;
+}
+
+header nav .list li a { color: #fff; text-transform: capitalize;}
+
+header nav .list li:hover { padding-right: 10px;}
+
+header nav .menu { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-end;
+    align-items: center;
+    width: 30px; 
+    height: 30px; 
+    position: absolute;
+    top: 33%;
+    right: 5%;
+    cursor: pointer;
+}
+
+header nav .menu::after { 
+    content: 'menu';
+    font-size: .5em;
+    text-transform: capitalize;
+    position: relative;
+    left: -50px;
+    top: -15px;
+}
+
+header nav .menu > span { display: block; width: 100%; height: 1px; background-color: #fff; transition: .5s;}
+header nav .menu > span:nth-child(2) { width: 50%;} 
+header nav .menu:hover > span:nth-child(2) { width: 100%;}
+
+/*================ Start Landing ==================== */
+
+.landing {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.landing::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb( 0 0 0 / .4);
+}
+
+.landing > div { 
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.landing h1 { margin: 0; text-transform: capitalize; letter-spacing: 1px;}
+
+.landing button {
+    display: block;
+    width: fit-content;
+    padding: .8em 1em;
+    margin: 1em auto 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #fafafa;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing p { line-height: 1.6; font-size: 1.1em; text-transform: capitalize;}
+
+.landing button:hover::before { top: 0; }
+
+.landing button::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 238, 238, 0.438);
+    transition: .5s;
+}
+/*=============================================== Section ===================================================== */
+
+.section { background-color: var(--MainColorOpsity); text-align: center; color: #777;}
+
+.section h2 { color: #fff; text-transform: capitalize; }
+
+.section p { margin: 2em 0; font-size: 1.1em;}
+
+.section .flex { justify-content: space-between; flex-wrap: wrap; }
+
+.section .flex > .box { flex-basis: 48%; margin-top: 3em; cursor: pointer; }
+
+.section .flex .box .im {  overflow: hidden;}
+
+.section .flex .box .im img { width: 100%; transition: .5s;}
+
+.section .flex .box .im:hover img{
+    transform: scale(1.25);
+}
+
+.section .flex  .box .text { background-color: rgba(255, 255, 255, 0.151); padding: .2em;}
+
+.section .flex  .box .text p { color: #999; line-height: 1.6; text-transform: capitalize;}
+
+/*=============== PortFolio ====================================== */
+
+.portfolio { background-color: var(--SecColorOpsity);}
+
+.portfolio .info { margin-top: 3em; margin-bottom: 1.5em; text-transform: capitalize;}
+
+.portfolio .info h2 { color: #fff; margin-bottom: 1.5em;}
+
+.portfolio .info p { color: #999; letter-spacing: 1px;}
+
+.portfolio .flex  { justify-content: space-between; flex-wrap: wrap; margin-top: 3em;}
+
+.portfolio .flex > .list-port, .box { flex-basis: 23%;}
+
+.portfolio .list-port { margin-top: .45em; }
+
+.portfolio .list-port li a { 
+    display:block;
+     color: #999; 
+     text-transform: capitalize;
+     padding: .5em; 
+     margin-bottom: .8em; 
+     background-color: rgba(255, 255, 255, 0.151);
+     line-height: 1.5;
+     font-size: 1em;
+     font-weight: normal;
+     border: 1px solid var(--MainColor);
+     border-radius: 10px;
+     transition: .5s;
+    }
+
+.portfolio .list-port li:first-of-type a { background-color: var(--pinkColor); color: #fff;}
+
+.portfolio .list-port li:hover a,
+.portfolio .list-port li:hover :first-of-type a { background-color: #fff; color: #777;}
+
+
+.portfolio .flex .box .cont  { 
+    margin-top: .5em; 
+    margin-bottom: 1.8em; 
+    overflow: hidden; 
+    cursor: pointer; 
+    position: relative;
+}
+
+.portfolio .flex .box .cont::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb( 0 0 0 / .5 );
+    transition: .5s;
+}
+
+.portfolio .flex .box .cont img { width: 100%; transition: .5s;}
+
+.portfolio .flex .box .cont:hover img { transform: scale(1.25);}
+
+/*======================= Offers ===========================*/
+
+.offers { background-color: #062038;}
+
+.offers .info { text-align: center; margin: 2em 0; text-transform: capitalize;}
+
+.offers .info h2 { margin: 1em 0; color: #fff;}
+
+.offers .info p { color: #999; margin: 1em 0;}
+
+.offers .flex { justify-content: space-between; align-items: center; flex-wrap: wrap; text-align: center;}
+
+.offers .flex > .box { flex-basis: 31%; margin: 2em 0; border-radius: 10px; box-shadow: 0 0 10px 8px var(--backGround); transition: .5s;}
+
+.offers .flex > .box .im { cursor: pointer; overflow: hidden; border-radius: 5px; margin: 1em;}
+
+.offers .flex > .box  .im img { width: 100%; transition: .5s;}
+
+.offers .flex .box .im:hover img { transform: scale(1.2) rotate(3deg);}
+
+.offers .flex > .box > .text { 
+    background-color: var(--backGround); 
+    padding: 1em; 
+    background-color: rgba(238, 238, 238, 0.281);
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.offers .flex > .box:hover { transform: translateY(-10px);}
+
+.offers .flex > .box > .text p { color: #999; line-height: 1.5; text-transform: capitalize;}
+
+/*===================== About =====================================  */
+.about { background-color: var(--SecondryColor);}
+.about .flex { justify-content: space-between; align-items: center; flex-wrap: wrap;}
+.about .flex > .box { flex-basis: 31%; margin: 1.5em 0; text-transform: capitalize;}
+.about .flex > .box > h3 { margin: 1em 0; color: #fff; }
+
+.about .flex .box .list-about p { margin: 1em 0; position: relative;}
+.about .flex .box .list-about p:not(:last-of-type):before {
+    content: '';
+    position: absolute;
+    width: 75%;
+    border: .5px solid #777;
+}
+.about .flex .box .list-about p a {  color: #999; font-weight: normal;  font-size: .8em;  transition: .5s;}
+
+.about .flex .box .list-about p:hover a { color: rgba(119, 119, 119, 0.61);}
+
+/*===================================== Footer ===============================  */
+footer { background-color: var(--SecondryColor); padding: 1em;}
+footer > div { text-align: center;}
+footer .list-footer { display: flex; justify-content: center; margin-bottom: 1em;}
+footer .list-footer li a { 
+    display: inline-block;
+    margin-left: 1.5em;
+    width: 35px;
+    height: 35px;
+    background-color: #062038;
+    box-shadow: 0 0 3px 3px #05498d86;
+    position: relative;
+    overflow: hidden;
+    transform: .5s;
+}
+footer .list-footer li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    left: 0;
+    background-color: rgba(153, 153, 153, 0.185);
+    transition: .5s;
+    z-index: 1;
+}
+
+footer .list-footer li:hover a::before { top: 0;}
+footer .list-footer li a > i { font-size: 1.3em; color: #fff; text-align:center; line-height: 1.7;}
+footer .info p { color: #999; font-weight: normal; text-transform: capitalize;}
+footer .info p span{  color: #fff; transition: .5s; cursor: pointer;}
+footer .info p span:first-of-type { text-transform: uppercase;}
+footer .info p span:hover { color: #999;} 
+
+
+
+

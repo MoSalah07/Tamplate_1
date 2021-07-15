@@ -1,0 +1,268 @@
+
+@media ( max-width:330px) { 
+
+    /*==================== Elements ====================================== */
+    .Elements .col-2 .form > form > div:nth-of-type(3) button  { padding: .5em 1.4em !important; }
+
+    .Elements .col-2 .form > form > div:nth-of-type(3) button:nth-of-type(2) { margin: 0 .8em !important;} 
+
+    .Elements .col-2 .form > form > div:nth-of-type(4) button {  display: block !important; margin: 1em auto !important; width: 100% !important;}
+
+    .col-2 .form:nth-of-type(2) form > div:last-of-type > div > input[type='checkbox'] + label { font-size: .75em !important;}
+
+    .col-2 .form:nth-of-type(2) form input[type='reset'] {  margin-left: 12% !important; }
+
+    .col-2 .art-img > .flex-art-img > img + p,
+    .col-2 .art-img > p:last-of-type 
+    { font-size: .8em !important;}
+
+    
+
+}
+
+
+
+/*==========================  Small Screen Max-width: 767px ==================================  */
+
+@media ( max-width: 767px ) {
+    /*=============================== Art-1 ====================================================== */
+    .art-1 .main-grid { 
+        row-gap: 20px;
+        width: calc( 100% - 4em );
+        height: calc(100% - 10em);
+    }
+
+
+    /*=============================== Element ================================== */
+    .Elements .col-2 .art-code { display: none;}
+    .col-1 .info-head > .text:first-of-type h2 { font-size: 1.2em;}
+    .col-1 .info-head > .text:first-of-type h2 + p { font-size: .8em !important; line-height: 1.4;}
+    .col-1 .info-head > .text:nth-of-type(2) h3 { font-size: 1em;}
+    .col-1 .info-head > .text > .more-info > p { width: 220px; font-size: .8em; line-height: 1.4;}
+
+    .col-1 .action > .box:first-of-type > div { flex-direction: column;}
+    .col-1 .action > .box button { display: flex;  width: 100%; margin: 1em auto; text-align: center;}
+
+    .col-1 .quotes::before { font-size: 1.1em;}
+    .col-1 .quotes > blockquote { padding: 1em; font-size: .7em;}
+
+    .col-1 article:nth-of-type(8).table  > h2 + table > tr,td { 
+        font-size: .8em;
+        font-weight: normal;
+    }
+
+    .col-1 .action > .box button { justify-content: center;}
+
+    .col-1 .lists .container-lists ul:not(:last-of-type) li { font-size: .8em; margin-bottom: .5em;}
+    .col-1 .lists .container-lists ol li { font-size: .75em; margin-bottom: .5em;}
+    .col-1 .lists .container-lists  h4 { margin-top: 1em;}
+
+    .col-1 .lists .container-lists ul.lists-icon { margin-top: 1em;}
+
+/*====================================== Col-2 ======================================= */
+
+    /* For Test El code dh  */
+    .col-2 .art-img > .flex-art-img > img { height: 200px;}
+
+
+    .Elements .col:nth-of-type(2) { display: flex; flex-direction: column;}
+    .Elements .col:nth-of-type(2) form { display: flex; flex-direction: column;}
+    /* For All Buttons */
+    .Elements .col-2 .form > form > div button {  
+        display: block; 
+        width: 100%; 
+        margin-bottom: 1em;
+        padding: .3em .6em;
+    }
+
+    .Elements .col-2 .form > form > div:nth-of-type(3) button
+    { 
+        display: inline-block; 
+        padding: .5em 2em;
+        width: fit-content;
+    }
+
+    .Elements .col-2 .form > form > div:nth-of-type(4) button { 
+        display: inline-block;
+        padding: .5em .7em;
+        width: fit-content;
+    }
+    
+    .Elements .col-2 .form > form > div:nth-of-type(3) button:nth-of-type(2) { margin: 0 1.8em;} 
+    .Elements .col-2 .form > form > div:nth-of-type(4) button:nth-of-type(2) { margin: 0 .59em;} 
+
+    .col-2 .form:nth-of-type(2) form > select { width: 100% !important; margin: .5em 0 1em !important;}
+
+    .col-2 .form:nth-of-type(2) form > div:first-of-type > div { display: block; margin-bottom: .8em;}
+
+    .col-2 .form:nth-of-type(2) form input[type='reset'] {  margin-left: 34%; }
+
+
+}
+
+
+
+/*============================================================ Min Media 768px ====================================  */
+
+@media ( min-width: 768px ) {
+    .container { width: 750px;}
+    /*================ Art-1 ======================== */
+        .art-1 .main-grid { 
+            gap: 20px; 
+            grid-template-columns:  repeat(3, 1fr);
+            width: calc(80% - 4em);
+            height: calc(40% - 4em); 
+        }
+
+        .art-1 .main-grid .box p { max-height: 200px; overflow: hidden;}
+
+    /*============================== Art-2 ============================================ */
+    
+    .art-2 .grid-art { grid-template-columns: repeat(4, 1fr); }
+    .art-2 .grid-art .box:first-of-type { grid-column: 1/5;}
+    .art-2 .grid-art .box:nth-of-type(2) { grid-column: 1/3;}
+    .art-2 .grid-art .box:nth-of-type(3) { grid-column: 3/5;}
+    .art-2 .grid-art .box h2 { font-size: 1.3em;}
+    .art-2 .grid-art .box:nth-of-type(2) h2, .art-2 .grid-art .box:last-of-type h2 { margin-top: 1em;}
+    .art-2 .grid { grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); }
+
+
+    /*============================= Element ====================================  */
+    
+
+    .Elements > div {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    /*============================= Col-1 ============================================== */
+    .col-1 .lists .container-lists > ul:last-of-type{ margin-top: 3em;}
+    .col-1 .action > .box  > div:first-of-type button:nth-of-type(2) { margin: 0 1.5em;}
+    .col-1 .action > .box  > div:nth-of-type(2) button:nth-of-type(2) { margin: 0 1.5em;}
+    .col-1 .quotes::before { font-size: 1.5em;}
+    .col-1 .quotes > blockquote { padding: 1.5em; font-size: .8em; font-weight: bold;}
+
+
+    /*==================================== Col-2 ========================================== */
+
+    .col-2 .form form > div:nth-of-type(3) > button { padding: .2em 1.5em;}
+    .col-2 .form form > div:nth-of-type(3) > button:nth-of-type(2) { margin: .5em;} 
+
+    .col-2 .form form > div:nth-of-type(4) > button { padding: .3em 1.5em;}
+    .col-2 .form form > div:nth-of-type(4) > button:nth-of-type(2) { margin: .5em;} 
+
+    .col-2 .form form > div:nth-of-type(5) > button { padding: .7em;}
+    .col-2 .form form > div:nth-of-type(5) > button:nth-of-type(2) { margin: .5em;} 
+
+    .col-2 .form form > div:nth-of-type(6) > button { padding: .7em;}
+    .col-2 .form form > div:nth-of-type(6) > button:nth-of-type(2) { margin: .5em;} 
+
+    .col-2 .form:nth-of-type(2) form > div:first-of-type > div:not(:first-of-type) { margin: 1em;}
+
+    .col-2 .form:nth-of-type(2) form > div:first-of-type > div { display: inline-block;}
+
+    .col-2 .form:nth-of-type(2) form input[type=submit], input[type='reset'] { margin-right: 1em;} 
+
+    .col-2 .form:nth-of-type(2) form input[value='search'] { margin-left: .5em; margin-top: 1em;}
+        
+        
+
+
+}
+
+
+/* =================================================== min Media 992px Medium Screen ===================================================== */
+
+@media ( min-width: 992px ) {
+    .container { width: 970px;}
+
+    /*============== Elements ======================= */
+    .col-1 .item .box p { margin: 1.3em 0 1.3em 1.3em;}
+
+    .col-1 .action > .box:first-of-type > button:first-of-type,  
+    .col-1 .action > .box:first-of-type > button:nth-of-type(2), 
+    .col-1 .action > .box:first-of-type > button:nth-of-type(3) { padding: .7em .7em; margin-left: .3em;}
+
+    .col-1 .action > .box:first-of-type > button:nth-of-type(4),
+    .col-1 .action > .box:first-of-type > button:nth-of-type(5),
+    .col-1 .action > .box:first-of-type > button:nth-of-type(6) { padding: .5em; margin: 1em 0 1em .5em;}
+
+    .col-1 .lists .container-lists ol:first-of-type li {  margin-left: 1em;}
+
+    /*==================== Media Col-2 =============================== */
+
+    .col-2 .form form > div:first-of-type > button { padding: .5em .7em; margin: 1em 0 1em;}
+    .col-2 .form form > div:first-of-type > button:nth-of-type(2) { margin: 0 .8em;}
+    .col-2 .form form > div:nth-of-type(2) > button:first-of-type { padding: 1em; } 
+
+    .col-2 .form form > div:nth-of-type(2) >  button:nth-of-type(2) { margin-left: 1em; padding: .5em .6em;}
+    .col-2 .form form > div:nth-of-type(2) >  button:nth-of-type(3) { margin-left: 1em; padding: .3em .5em;}
+
+}
+
+
+/*==================================================== min Media 1200px Large Screen ========================================== */
+
+
+@media ( min-width: 1200px ) {
+    .container { width: 1170px;}
+
+    .col-1 .info-head > .text > .more-info > p { width: 500px;}
+
+    /*=============== Elements ======================== */
+    .col-1 .action > .box > button { display: inline-flex; cursor: pointer;}
+    
+}
+
+
+@media ( max-width: 991px ) { 
+
+    /*===================== Elements ============================ */
+    .col-1 .lists .container-lists { flex-direction: column; text-align: center;}
+    .col-1 .action > .box > button { display: flex; cursor: pointer;}
+    .col-1 .action { display: flex; flex-direction: column;}
+    .col-1 .action > .box:first-of-type > .cont-flex { flex-direction: column; text-align: center;}
+    .col-1 .action > .box:first-of-type > .cont-flex > div:first-of-type > button, 
+    .col-1 .action > .box:first-of-type > .cont-flex > div:last-of-type > button { flex-direction: column; text-align: center;}
+    .col-1 .action > .box:first-of-type > .cont-flex { flex-direction: column;}
+    .col-1 .action > .box:last-of-type { flex-direction: column; text-align: center;}
+
+    .col-1 .action > .box:first-of-type > button:first-of-type,  
+    .col-1 .action > .box:first-of-type > button:nth-of-type(2), 
+    .col-1 .action > .box:first-of-type > button:nth-of-type(3) { padding: .7em .7em; margin: 1em auto; width: 100%; width: 100%; text-align: center; }
+
+    .col-1 .action > .box:first-of-type > button:nth-of-type(4),
+    .col-1 .action > .box:first-of-type > button:nth-of-type(5),
+    .col-1 .action > .box:first-of-type > button:nth-of-type(6) { padding: .5em; margin: 1em auto; width: 100%;}
+
+    .Elements .col-2 .art-code { display: none;}
+
+    /*====================================== Col-2 ============================================== */
+    
+
+} 
+
+
+
+
+/*============= Special Media Screen Smallest In my Page =====================*/
+
+@media ( min-width: 501px ) {
+
+    .art-1  { min-height: 60vh;}
+    
+    .art-1 .main-grid { top: 50%;} 
+}
+
+
+
+@media ( max-width: 500px ) {
+
+    .art-1  {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .art-1 .main-grid { 
+        top: 60%;
+        }
+}

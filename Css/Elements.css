@@ -1,0 +1,484 @@
+/*================== Variables ====================== */
+:root {
+    --MainColor: #062038;
+    --MainColorOpsity: #062038e8;
+    --SecondryColor: #041625;
+    --SecColorOpsity: #041625ed;
+    --pinkColor: #aa14cc;
+    --backGround: rgba(255, 255, 255, 0.151);
+    --colorArticles: #9ba2a8;
+    --Blue: #2196f3;
+    --Font-size-section: 2em;
+    --Main-Nav-Gen: rgba(4, 22, 37, 0.959);
+    --ColorP: #999;
+    --ColorH: #fff;
+    
+}
+
+img { width: 100px;}
+
+/*==================  Frame Work =============================== */
+.main-grid { display: grid;}
+
+
+/*====================== Buttons ==================================  */
+.btn-white-big { 
+    color: var(--MainColor);
+    background-color: var(--ColorH);
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: 1em 1.2em;
+    border: 1px solid var(--MainColor);
+    outline: none;
+}
+
+.btn-dark-big {
+    color: var(--ColorH);
+    background-color: var(--MainColor);
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: 1em 1.2em;
+    border: 1px solid #222;
+    outline: none;
+}
+
+.btn-light-big {
+    color: var(--ColorH);
+    background-color: var(--backGround);
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: 1em 1.2em;
+    border: 1px solid #999;
+    outline: none;
+}
+
+/*========================== Btn-Small ====================================== */
+
+.btn-opacity { opacity: .3;}
+
+.btn-white-sml {
+    color: var(--MainColor);
+    background-color: var(--ColorH);
+    font-weight: bold;
+    font-size: .7em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: .8em 1.2em;
+    border: 1px solid var(--MainColor);
+    outline: none;
+}
+
+.btn-dark-sml { 
+    color: var(--ColorH);
+    background-color: var(--MainColor);
+    font-weight: bold;
+    font-size: .7em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: .8em 1.2em;
+    border: 1px solid #222;
+    outline: none;
+    
+}
+
+.btn-light-sml {
+    color: var(--ColorH);
+    background-color: var(--backGround);
+    font-weight: bold;
+    font-size: .7em;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: .8em 1.2em;
+    border: 1px solid #999;
+    outline: none;
+}
+
+
+
+
+/*===================== Articel One ======================== */
+.art-1 { background-color: var(--MainColor);  position: relative;}
+
+
+.art-1 .main-grid {
+     position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+.art-1 .main-grid .box h2 { color: var(--ColorH); margin-bottom: 1em;}
+
+.art-1 .main-grid .box p { color: var(--ColorP);}
+
+
+
+/*========================== Art-2 ============================= */
+.art-2 { background-color: var(--MainColor); position: relative;} 
+.art-2::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    width: calc( 100% - 4em);
+    height: .5px;
+    background-color: #999;
+}
+.art-2 .grid-art { display: grid; gap: 20px;}
+.art-2 .grid-art .box h2 { color: var(--ColorH); margin-bottom: 1.3em;}
+.art-2 .grid-art .box p { color: var(--ColorP);}
+.art-2 .grid { display: grid; gap: 20px; margin-top: 2em; }
+.art-2 .grid .box h2 { margin: 1em 0; font-size: 1em; color: var(--ColorH);}
+.art-2 .grid .box p { color: var(--ColorP); line-height: 1.4;} 
+
+
+/*=================================== Elements ===================================== */
+.Elements { background-color:#062038; color:#fff;}
+
+.Elements > div { 
+    display: grid;
+}
+
+.col-1 > h2,article { padding: 1em 0; text-transform: capitalize;} 
+
+/*=========== Col-1 Text ====================== */
+
+.col-1 .art-text { position: relative;}
+
+.col-1 .art-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .5px;
+    background-color: #999;
+}
+
+.col-1 .art-text h4 { font-size: 1.3em; margin-bottom: 1.3em; color: var(--ColorH);}
+
+.col-1 .art-text > p { width: 80%; font-size: .75em; color: var(--ColorP); line-height: 1.5;} 
+
+.col-1 .art-text > p > b,strong,a { color: var(--ColorH);}
+
+
+/*=========== Col-1 Head ====================== */
+.col-1 .head { position: relative;}
+.col-1 .head::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .5px;
+    background-color: #999;
+}
+.col-1 .head h2 { margin: 1em 0 1.5em;}
+.col-1 .head h3 { margin-bottom: 1.2em; font-size: 1.2em;}
+.col-1 .head h4 { margin-bottom: .9em;}
+.col-1 .head h5 { margin-bottom: .6em;}
+.col-1 .head h6 { margin-bottom: .3em;}
+
+/*================= Col-1 info-head =================== */
+
+.col-1 .info-head > .text h2 { margin: 1.5em 0;}
+.col-1 .info-head > .text:first-of-type h2 + p { margin-bottom: 2em;}
+.col-1 .info-head > .text > .more-info { margin: 3em 0 1.5em;}
+.col-1 .info-head > .text:nth-of-type(2) h3,
+.col-1 .info-head > .text:last-of-type h4
+ { margin-bottom: 1em;}
+
+ /*================ Col-1 Lists ====================== */
+.col-1 .lists > h2 { margin-bottom: 1.3em;} 
+
+.col-1 .lists .container-lists { 
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.col-1 .lists .container-lists  > ul,ol { flex-basis: 48%;}
+
+.col-1 .lists .container-lists  h4 { margin-bottom: 1em;}
+
+.col-1 .lists .container-lists ul:first-of-type li { list-style: circle; align-self: center; font-size: .7em; font-weight: bold; line-height: 1.8; margin-bottom: .5em;}
+
+.col-1 .lists .container-lists ol:first-of-type li { font-size: .7em; font-weight: bold; line-height: 1.7;}
+
+.col-1 .lists .container-lists ul:nth-of-type(2) li { list-style: square; font-size: .7em; font-weight: bold; line-height: 1.8; margin-bottom: .5em;}
+.col-1 .lists .container-lists > ul:first-of-type { max-height: 150px;}
+.col-1 .lists .container-lists > ul:last-of-type { display: flex;}
+.col-1 .lists .container-lists > ul:last-of-type li a { display: block; margin-left: .5em;}
+.col-1 .lists .container-lists ul.lists-icon { display: flex;}
+.col-1 .lists .container-lists ul.lists-icon li { 
+    width: 30px;
+    height: 30px;
+    background-color: #062038;
+    margin-right: .1em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;}
+
+.col-1 .lists .container-lists ul.lists-icon li::before { 
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--backGround);
+    transition: .5s;
+    
+}
+
+.col-1 .lists .container-lists ul.lists-icon li:hover::before { left: 0;}
+
+.col-1 .lists .container-lists ul.lists-icon li a i { font-size: 1.2em; text-align: center; line-height: 1.5;}
+
+.col-1 .item > h2 {font-size: 1.3em; color: var(--ColorH);}
+.col-1 .item .box { margin: 1em}
+.col-1 .item .box  span { color: #fafafa; font-weight: bold;}
+.col-1 .item .box p { color: var(--ColorP);}
+    /*======================= Buttons ===============================  */
+.col-1 .action > .box:first-of-type > .cont-flex { display: flex; justify-content: space-between;}
+.col-1 .action > .box:first-of-type > .cont-flex > div { flex: 48%;}
+.col-1 .action > .box button { cursor: pointer;}
+.col-1 .action > .box > div { display: flex;}
+.col-1 .action > .box  > div:first-of-type,
+.col-1 .action > .box  > div:nth-of-type(2)
+{ margin-bottom: 1em;}
+.col-1 .quotes { position: relative; margin-top: 2em;}
+
+.col-1 .quotes::before {
+    content: 'Blockquote';
+    position: absolute;
+    left: 0;
+    top: -25px;
+    color: var(--ColorH);
+
+
+}
+.col-1 .quotes > blockquote { 
+    background-color: var(--backGround);
+    padding: 1.5em;
+    line-height: 1.6;
+    color: var(--ColorP);
+    position: relative;
+}
+
+.col-1 .quotes > blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--backGround);
+}
+
+.col-1 article:nth-of-type(8).table  > h2  { position: relative;}
+
+.col-1 article:nth-of-type(8).table > h2::after {
+    content: 'Default';
+    bottom: -40px;
+    left: 0;
+    position: absolute;
+    color: #fff;
+}
+
+
+.col-1 article:nth-of-type(8).table  > h2  { position: relative;}
+.col-1 article:nth-of-type(8).table  > h2 + table { margin-top: 3em;}
+.col-1 article:nth-of-type(8).table  > h2 + table > tr,td { 
+    border: .5px solid #999; 
+    padding: .5em; 
+    color: var(--ColorP);
+    font-size: .9em;
+    
+}
+
+.col-1 article:nth-of-type(8).tabel > table,tr:nth-child(odd) { background-color: var(--backGround);}
+
+.col-1 article:nth-of-type(8).table  > h2 + table tbody > tr:last-of-type > td { text-align: right;}
+
+.col-1 article:nth-of-type(9).table  > h2 + table tbody > tr:last-of-type > td { text-align: right;}
+
+.col-1 article:nth-of-type(9).table { margin-top: 3em;}
+
+.col-1 article:nth-of-type(9).table  > h2  { margin-bottom: 1em;}
+
+
+
+/*========================== Col-2 ================================== */
+.col-2 .form form > div > button { display: inline-block; cursor: pointer;}
+
+.col-2 .form form > div:nth-of-type(2), 
+.col-2 .form form > div:nth-of-type(3), 
+.col-2 .form form > div:nth-of-type(4), 
+.col-2 .form form > div:nth-of-type(5),
+.col-2 .form form > div:nth-of-type(6) { margin-bottom: 1em;}
+
+.col-2 .form:nth-of-type(2)  h2 { margin-bottom: 1em;}
+
+.col-2 .form:nth-of-type(2) form input[type='text'],input[type=email] { 
+    display: inline-block; 
+    margin-bottom: .8em;
+    padding: .5em; 
+    background-color: transparent;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.col-2 .form:nth-of-type(2) form input[type='text']::placeholder, 
+input[type=email]::placeholder { text-transform: capitalize; color: #fff;}
+
+.col-2 .form:nth-of-type(2) form > select { 
+    display: block; 
+    margin: 1em 0; 
+    background-color: transparent; 
+    color: #fff;
+    width: 85%;
+    padding: .5em;
+}
+
+.col-2 .form:nth-of-type(2) form > select > option { background-color: #062038;}
+
+
+.col-2 .form:nth-of-type(2) form > div:first-of-type input[type='radio'] { display: inline-block;}
+
+.col-2 .form:nth-of-type(2) form > div:first-of-type input[type='radio']:nth-of-type(2) { margin: 0 1em;}
+
+.col-2 .form:nth-of-type(2) form > div:first-of-type input[type='radio'] + label { 
+    text-transform: capitalize;
+    font-size: 1.1em;
+    margin-left: .3em;
+    user-select: none;
+}
+
+.col-2 .form:nth-of-type(2) form > div:last-of-type > div { margin-bottom: .8em;}
+
+.col-2 .form:nth-of-type(2) form > div:last-of-type > div > input[type='checkbox'] + label { 
+    text-transform: capitalize; 
+    font-size: .9em; 
+    margin-left: .5em;
+    user-select: none;
+}
+
+
+.col-2 .form:nth-of-type(2) form > div:last-of-type > textarea { 
+    background-color: #9ba2a84f;
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin: 1.5em 0;
+    color: #FFF;
+    outline: none;
+    border: 1px solid #999;
+    resize: none;
+}
+
+.col-2 .form:nth-of-type(2) form > div:last-of-type > textarea::placeholder { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+}
+
+.col-2 .form:nth-of-type(2) form input[type=submit], input[type='reset'] { 
+    display: inline-block;
+    padding: .4em 1.5em;
+
+    cursor: pointer;
+}
+
+.col-2 .form:nth-of-type(2) form input[type='search'] {
+    margin-bottom: .8em;
+    margin-top: 1em;
+    padding: .5em; 
+    background-color: transparent;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.col-2 .form:nth-of-type(2) form input[value='search'] { 
+    display: inline-block; 
+    padding: .4em 1em; 
+
+    cursor: pointer;
+}
+
+.col-2 .images-1 > h2 { margin: .8em 0; text-transform: capitalize; letter-spacing: 1px; font-size: 1.1em;}
+
+.col-2 .images-1 > img { width: 100%; display: block; margin: 0 auto 1em;}
+
+.col-2 .images-1 .main-images { display: flex; flex-wrap: wrap; justify-content: space-between; cursor: pointer;  width: 100%;}
+
+.col-2 .images-1 .main-images > div { flex-basis: 32%;}
+
+.col-2 .images-1 .main-images > div > img { width: 100%;}
+
+.col-2 .art-img { position: relative; margin: 2em 0;}
+
+.col-2 .art-img:first-of-type:before { 
+    content: 'left & right';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.col-2 .art-img > .flex-art-img { display: flex; justify-content: space-between; align-items: center;}
+
+.col-2 .art-img > .flex-art-img > img,p { flex-basis: 47%;}
+
+.col-2 .art-img > .flex-art-img > img  { max-width: 100%; display: block; margin-bottom: 1em;}
+
+.col-2 .art-img > .flex-art-img > img + p { 
+    width: 100%; 
+    align-self: flex-end; 
+    font-size: 1em; 
+    line-height: 1.6; 
+    font-weight: normal;
+    color: var(--ColorP);
+}
+
+.col-2 .art-img > p:last-of-type { color: var(--ColorP); font-size: 1em; line-height: 1.6;}
+
+.col-2 article.art-img:nth-of-type(2) .flex-art-img > p:first-of-type { color: var(--ColorP); line-height: 1.6;}
+
+.col-2 article.art-box > h2 { margin-bottom: 1em;}
+
+.col-2 article.art-box > .text, 
+.col-2 article.art-code > .text  { border: .5px solid var(--ColorP); padding: 1.5em;}
+
+.col-2 article.art-box > .text > p { line-height: 1.5; font-size: .9em; color: var(--ColorP);}
+
+.col-2 article.art-code > h2 { margin-bottom: 1em;}
+
+.col-2 article.art-code > .text  { background-color: var(--backGround);}
+
+.col-2 article.art-code > .text > pre { color: var(--ColorP); font-size: .85em;}
+
+
+/*========================================================== About ==============================================*/
+
+.about .flex .box .list-about p:not(:last-of-type):before { bottom: -10px;}
+
+
+
+
